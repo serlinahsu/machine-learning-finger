@@ -1,7 +1,7 @@
   // Classifier Variable
   let classifier;
   // Model URL
-  let imageModelURL = 'https://teachablemachine.withgoogle.com/models/PyYWrqHio/';
+  let imageModelURL = 'https://teachablemachine.withgoogle.com/models/LjCLKFyo1/';
   
   // Video
   let video;
@@ -15,10 +15,10 @@
   }
 
   function setup() {
-    createCanvas(320, 260);
+    createCanvas(640, 480);
     // Create the video
     video = createCapture(VIDEO);
-    video.size(320, 240);
+    video.size(640, 480);
     video.hide();
 
     flippedVideo = ml5.flipImage(video);
@@ -33,9 +33,9 @@
 
     // Draw the label
     fill(255);
-    textSize(16);
+    textSize(18);
     textAlign(CENTER);
-    text(label, width / 2, height - 4);
+    text(label, width / 2, height - 10);
   }
 
   // Get a prediction for the current video frame
